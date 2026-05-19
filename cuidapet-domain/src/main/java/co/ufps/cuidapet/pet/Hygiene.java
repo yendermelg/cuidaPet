@@ -59,6 +59,51 @@ public class Hygiene {
         this.recomendaciones = recomendaciones;
     }
 
+    public static Hygiene of(String hygieneText) {
+
+        String[] partes = hygieneText.split("\n");
+
+        Frecuencia frecuenciaDucha = Frecuencia.valueOf(
+                partes[0]
+                        .replace("Frecuencia Ducha: ", "")
+                        .trim()
+                        .toUpperCase()
+        );
+
+        Frecuencia cuidadoDental = Frecuencia.valueOf(
+                partes[1]
+                        .replace("Cuidado Dental: ", "")
+                        .trim()
+                        .toUpperCase()
+        );
+
+        Frecuencia limpiezaOidos = Frecuencia.valueOf(
+                partes[2]
+                        .replace("Limpieza Oidos: ", "")
+                        .trim()
+                        .toUpperCase()
+        );
+
+        Frecuencia frecuenciaCepillado = Frecuencia.valueOf(
+                partes[3]
+                        .replace("Frecuencia Cepillado: ", "")
+                        .trim()
+                        .toUpperCase()
+        );
+
+        String recomendaciones = partes[4]
+                .replace("Recomendaciones: ", "")
+                .trim();
+
+        return new Hygiene(
+                frecuenciaDucha,
+                cuidadoDental,
+                limpiezaOidos,
+                frecuenciaCepillado,
+                recomendaciones
+        );
+    }
+
     @Override
     public String toString() {
         return "Frecuencia Ducha: " + this.getFrecuenciaDucha() + "\n" +

@@ -20,8 +20,8 @@ public class BuscadorTrie implements AnimalRepositorio {
     //Recibe una lista de animales para buscar entre ellas
     public BuscadorTrie(List<Pet> lista){
         for(Pet a:lista){
-            String atributo1=a.getEspecie();
-            String nombre=a.getRaza().toLowerCase().replaceAll("\\s+", "");
+            String atributo1=a.getAnimal().toString();
+            String nombre=a.getRace().toString().toLowerCase().replaceAll("\\s+", "");
 
             if(this.atributos.containsKey(atributo1)){
                 this.atributos.get(atributo1).insertar(nombre);

@@ -59,6 +59,44 @@ public class Food {
         this.horario = horario;
     }
 
+    public static Food of(String foodText) {
+
+        String[] partes = foodText.split("\n");
+
+        Marca marca = Marca.valueOf(
+                partes[0].replace("Marca: ", "")
+                        .trim()
+                        .toUpperCase()
+        );
+
+        TipoComida tipo = TipoComida.valueOf(
+                partes[1].replace("Tipo: ", "")
+                        .trim()
+                        .toUpperCase()
+        );
+
+        int cantidadDiaria = Integer.parseInt(
+                partes[2].replace("Cantidad Diario: ", "")
+                        .trim()
+        );
+
+        String unidadMedida = partes[3]
+                .replace("Unidad de Medida: ", "")
+                .trim();
+
+        String horario = partes[4]
+                .replace("Horario: ", "")
+                .trim();
+
+        return new Food(
+                marca,
+                tipo,
+                cantidadDiaria,
+                unidadMedida,
+                horario
+        );
+    }
+
     @Override
     public String toString() {
         return "Marca: " + this.marca + "\n" +

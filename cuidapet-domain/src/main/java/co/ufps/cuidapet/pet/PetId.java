@@ -1,5 +1,7 @@
 package co.ufps.cuidapet.pet;
 
+import co.ufps.cuidapet.DomainException;
+
 import java.util.UUID;
 
 public class PetId {

@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Pet {
     private PetId petId;
     private String name;
-    private String size;
+    private double size;
     private Race race;
     private int edad;
     private Animal animal;
@@ -15,7 +15,7 @@ public class Pet {
 
     private Pet(PetId petId,
                String name,
-               String size,
+               double size,
                Race race,
                int edad,
                Animal animal,
@@ -35,7 +35,7 @@ public class Pet {
 
     //Creacion objeto
     public static Pet create(String name,
-                   String size,
+                   double size,
                    Race race,
                    int edad,
                    Animal animal,
@@ -47,7 +47,7 @@ public class Pet {
     //Para reconstruccion del objeto desde la persistencia
     public static Pet of(PetId petId,
                          String name,
-                         String size,
+                         double size,
                          Race race,
                          int edad,
                          Animal animal,
@@ -88,11 +88,11 @@ public class Pet {
         this.name = name;
     }
 
-    public String getSize() {
+    public double getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(double size) {
         this.size = size;
     }
 

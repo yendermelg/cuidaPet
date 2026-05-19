@@ -1,4 +1,6 @@
 package co.ufps.cuidapet.buscador;
+import co.ufps.cuidapet.pet.Pet;
+
 import java.util.List;
 
 public class BuscadorAnimal {
@@ -8,7 +10,7 @@ public class BuscadorAnimal {
         this.buscador = buscador;
     }
 
-    public List<Pet> ejecutar(String nombre,String especie){
+    public List<Pet> ejecutar(String nombre, String especie){
         return buscador.buscar(nombre, especie);
     }
 }

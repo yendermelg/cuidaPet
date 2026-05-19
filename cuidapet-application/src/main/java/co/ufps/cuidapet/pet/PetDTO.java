@@ -2,7 +2,7 @@ package co.ufps.cuidapet.pet;
 
 public record PetDTO (String petId,
         String name,
-        String size,
+        double size,
         String race,
         int edad,
         String animal,

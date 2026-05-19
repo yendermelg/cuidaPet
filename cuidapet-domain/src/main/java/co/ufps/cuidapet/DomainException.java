@@ -1,4 +1,4 @@
-package co.ufps.cuidapet.pet;
+package co.ufps.cuidapet;
 
 public class DomainException extends RuntimeException {
     public DomainException(String message) {
