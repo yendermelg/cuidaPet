@@ -5,8 +5,8 @@
     <file url="file://$PROJECT_DIR$/cuidapet-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cuidapet-application/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cuidapet-application/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cuidapet-cuidapet/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cuidapet-cuidapet/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cuidapet-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cuidapet-domain/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cuidapet-infraestructure/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cuidapet-infraestructure/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

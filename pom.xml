@@ -13,7 +13,7 @@
     <module>cuidapet-api</module>
     <module>cuidapet-application</module>
     <module>cuidapet-infraestructure</module>
-    <module>cuidapet-cuidapet</module>
+    <module>cuidapet-domain</module>
   </modules>
 
   <properties>
