@@ -18,4 +18,7 @@ public interface IPetRepository {
 
     // Eliminar mascota
     public int borrar(PetId petId);
+
+    public List<Pet> filtrarPorRaza(String raza);
+
 }

@@ -47,6 +47,18 @@ public class PetRepositoryJpa implements IPetRepository{
     }
 
     @Override
+    public List<Pet> filtrarPorRaza(String raza) {
+        return entityManager.createQuery(
+                        "SELECT pj FROM PetJpa pj WHERE LOWER(pj.race) LIKE LOWER(:raza)",
+                        PetJpa.class)
+                .setParameter("raza", "%" + raza.trim() + "%")
+                .getResultList()
+                .stream()
+                .map(this::toDomain)
+                .toList();
+    }
+
+    @Override
     public int borrar(PetId petId){return 0;}
 
     //Pasar dominio a jpa
