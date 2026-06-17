@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources SYSTEM
+        "file:///C:/glassfish7-15/glassfish/lib/dtds/glassfish-resources_1_5.dtd">
+
+<resources>
+
+    <jdbc-connection-pool
+            name                              = "CuidaPetPool"
+            datasource-classname              = "com.mysql.cj.jdbc.MysqlDataSource"
+            res-type                          = "javax.sql.DataSource"
+            max-pool-size                     = "10"
+            steady-pool-size                  = "2"
+            connection-validation-method      = "auto-commit"
+            is-connection-validation-required = "true"
+            fail-all-connections              = "false">
+
+        <property name="serverName"              value="18.209.45.69"/>
+        <property name="portNumber"              value="3306"/>
+        <property name="databaseName"            value="cuidapet_db"/>
+        <property name="user"                    value="test"/>
+        <property name="password"                value="Curso20251"/>
+        <property name="useSSL"                  value="false"/>
+        <property name="serverTimezone"          value="America/Bogota"/>
+        <property name="allowPublicKeyRetrieval" value="true"/>
+    </jdbc-connection-pool>
+
+    <jdbc-resource
+            jndi-name = "jdbc/cuidapet"
+            pool-name = "CuidaPetPool"
+            enabled   = "true"/>
+
+</resources>
