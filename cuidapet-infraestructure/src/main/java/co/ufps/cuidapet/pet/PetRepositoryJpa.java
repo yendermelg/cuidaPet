@@ -1,11 +1,13 @@
 package co.ufps.cuidapet.pet;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 
 import java.util.List;
 import java.util.Optional;
 
+@ApplicationScoped
 public class PetRepositoryJpa implements IPetRepository{
     @PersistenceContext
     private EntityManager entityManager;

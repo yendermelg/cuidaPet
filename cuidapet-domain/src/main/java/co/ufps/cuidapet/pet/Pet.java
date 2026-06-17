@@ -2,7 +2,7 @@ package co.ufps.cuidapet.pet;
 
 import java.util.Objects;
 
-public class Pet {
+public class  Pet {
     private PetId petId;
     private String name;
     private double size;
